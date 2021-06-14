@@ -2,7 +2,9 @@
 layout: default
 title: Hello world
 htmlClass: html
-bodyClass: body
+bodyClass: body bg-gray-200
 ---
-<h1>Hello world 👋<br/>from “{{ site.name }}”</h1>
-{% image "eleventy_logo.png", "The possum is Eleventy’s mascot" %}
+<div class="flex justify-center">
+  <h1 class="text-lg font-semibold">Hello world 👋<br/>from “{{ site.name }}”</h1>
+  {% image "eleventy_logo.png", "The possum is Eleventy’s mascot" %}
+</div>
