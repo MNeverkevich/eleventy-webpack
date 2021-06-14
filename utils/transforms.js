@@ -7,18 +7,18 @@ const shouldTransformHTML = (outputPath) =>
   process.env.NODE_ENV === 'production';
 
 module.exports = {
-  htmlmin: (content, outputPath) =>
-    shouldTransformHTML(outputPath)
-      ? htmlminifier.minify(content, {
-          html5: true,
-          removeComments: true,
-          collapseWhitespace: true,
-          collapseBooleanAttributes: true,
-          removeRedundantAttributes: true,
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true
-        })
-      : content,
+  // htmlmin: (content, outputPath) =>
+  //   shouldTransformHTML(outputPath)
+  //     ? htmlminifier.minify(content, {
+  //         html5: true,
+  //         removeComments: true,
+  //         collapseWhitespace: true,
+  //         collapseBooleanAttributes: true,
+  //         removeRedundantAttributes: true,
+  //         removeScriptTypeAttributes: true,
+  //         removeStyleLinkTypeAttributes: true
+  //       })
+  //     : content,
 
   safelink: (content, outputPath) => {
     if (outputPath && outputPath.endsWith('.html')) {
